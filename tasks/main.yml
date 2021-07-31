@@ -6,8 +6,21 @@
 #   - https://docs.microsoft.com/nl-nl/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-on-windows-server?view=o365-worldwide
 
 
-- name: Install IIS (Web-Server and Web-Common-Http)
+- name: Install feature Windows Defender
   ansible.windows.win_feature:
     name:
     - Windows-Defender
     state: present
+
+- name: Enable Windows Defender
+  ansible.windows.win_service:
+    name: WinDefend
+    start_mode: auto
+    state: started
+    
+- name: Configure Virus & Threat proctection (Realtime, Cloud, Automatic Sample submission)    
+
+
+- name: Configure controlled folder access
+
+- name: Configure exclusions
