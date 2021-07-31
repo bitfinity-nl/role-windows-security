@@ -4,7 +4,7 @@
 #
 # Sources:
 #   - https://docs.microsoft.com/nl-nl/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-on-windows-server?view=o365-worldwide
-
+#   - https://www.rootusers.com/configure-windows-defender-using-group-policy/
 
 - name: Install feature Windows Defender
   ansible.windows.win_feature:
